@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <a href="welcome.htm" class="btn">Enter Website</a>
+        <style>
+            .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: black;
+}
+        </style>
+      <div class="container">
+          <h1>Mobile Store</h1>
+          <nav>
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="contact.htm">Contact</a></li>
+              <li><a href="login.htm">Sign in</a></li>
+              <li><a href="register.htm">Register</a></li>
+              <li class="cart">
+                🛒 Cart (<span id="cart-count">0</span>)
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <main>
+
+      <div class="home-banner">
+          <img src="images/welcome2.jpg" alt="Banner" />
+          <style>
+              .home-banner {
+  width: 100%;
+  height: 660px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.home-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+          </style>
+      </div>
+
+      <section id="iphone" class="iphone-section">
+          <h1>Iphone Collection</h1>
+      </section>
+    <section class="products">
+      <div class="product">
+        <img src="images/iphone16.jpg" alt="iPhone 16">
+        <a href="iphone16.htm" style="color:black">
+          press here to show details
+        </a>
+        <h2>iPhone 16 pro</h2>
+        <p>Price: 1000$</p>
+        <button onclick="addToCart('iPhone 16',1000)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/iphone15.jpg" alt="iphone15">
+        <a href="iphone15.htm" style="color:black">
+          press here to show details
+        </a>
+        <h2>iphone15 pro</h2>
+        <p>Price: 900$</p>
+        <button onclick="addToCart('iphone15 pro',900)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/iphone14.jpg" alt="iphone14">
+        <a href="iphone14.htm" style="color:black">
+          press here to show details
+        </a>
+        <h2>iphone14 pro</h2>
+        <p>Price: 800$</p>
+        <button onclick="addToCart('iphone14 pro',800)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/iphone13.jpg" alt="iPhone 13">
+        <a href="iphone13.htm" style="color:black">
+           press here to show details
+        </a>
+          <div><h2>iphone 13</h2></div>
+        <p>Price: 700$</p>
+        <button onclick="addToCart('iphone13',700)">Add to Cart</button>
+        <div id="cart-popup" class="cart-popup">
+            <h3>Cart Items</h3>
+            <ul id="cart-items"></ul>
+            <p id="cart-total"><strong>Total:</strong>$0</p>
+            <a href="checkout.htm">
+                <button style="margin-top: 15px; width: 100%; background-color: black;">Go to Checkout</button>
+              </a>
+          </div>
+
+      </div>
+        <div class="product">
+            <img src="images/iphone12.jpg" alt="iPhone 12 Pro">
+            <h2>iphone 12</h2>
+            <p>Price: 650$</p>
+            <button onclick="addToCart('iphone12',430)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/iphone11.jpg" alt="iPhone 11 Pro">
+            <h2>iphone11 pro</h2>
+            <p>Price: 600$</p>
+            <button onclick="addToCart('iphone11 pro',600)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/iphone xs.jpg" alt="iPhone XS Pro">
+            <h2>iphone XS Max</h2>
+            <p>Price: 550$</p>
+            <button onclick="addToCart('iphone XS pro',550)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/iphone x.jpg" alt="iPhone X Pro">
+            <h2>iphone X pro</h2>
+            <p>Price: 500$</p>
+            <button onclick="addToCart('iphone X pro',500)">Add to Cart</button>
+        </div>
+    </section>
+
+      <section id="airpods" class="airpods-section">
+          <h1>AirPods Collection</h1>
+
+          <section class="products">
+          <div class="product">
+              <img src="images/airpods-pro-2.jpg" alt="AirPods Pro 2">
+              <p><a href="airpods-pro-2.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>AirPods Pro 2</h2>
+              <h3>Price: 250$</h3>
+              <button onclick="addToCart('Airpods pro 2',250)">Add to Cart</button>
+          </div>
+
+          <div class="product">
+              <img src="images/airpods-pro.jpg" alt="AirPods pro">
+              <p><a href="airpods-pro.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>AirPods Pro</h2>
+              <h3>Price: 200$</h3>
+              <button onclick="addToCart('Airpods pro',200)">Add to Cart</button>
+          </div>
+
+          <div class="product">
+              <img src="images/airpods.jpg" alt="AirPods ">
+              <p><a href="airpods.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>AirPods </h2>
+              <h3>Price: 150$</h3>
+              <button onclick="addToCart('Airpods',150)">Add to Cart</button>
+          </div>
+
+          <div class="product">
+              <img src="images/airpods-gen2.jpg" alt="AirPods gen 2">
+              <p><a href="airpods-gen2.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>AirPods Gen 2</h2>
+              <h3>Price: 100$</h3>
+              <button onclick="addToCart('Airpods Gen2',100)">Add to Cart</button>
+          </div>
+
+      </section>
+
+      <section id="iphone" class="macbook-section">
+          <h1>MacBook Collection</h1>
+      </section>
+
+          <section class="products">
+      <div class="product">
+      <img src="images/macbook.jpg" alt="macbook bro">
+      <p><a href="macbook.htm" style="color:black">
+          press here to show details</a></p>
+      <h2>MacBook Pro</h2>
+      <h3>Price: 1999$</h3>
+          <button onclick="addToCart('MacBook Pro',1999)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+          <img src="images/macbook-air.jpg" alt="macbook bro">
+          <p><a href="macbook-air.htm" style="color:black">
+              press here to show details</a></p>
+          <h2>MacBook Air</h2>
+          <h3>Price: 1500$</h3>
+          <button onclick="addToCart('MacBook Air',1500)">Add to Cart</button>
+      </div>
+
+              <div class="product">
+                  <img src="images/macbook-air-m2.jpg" alt="macbook bro">
+                  <h2>MacBook Air M2</h2>
+                  <h3>Price: 1250$</h3>
+                  <button onclick="addToCart('MacBook Air M2',1250)">Add to Cart</button>
+              </div>
+
+              <div class="product">
+                  <img src="images/macbook-air-m3.jpg" alt="macbook bro">
+                  <h2>MacBook Air M3</h2>
+                  <h3>Price: 1000$</h3>
+                  <button onclick="addToCart('MacBook Air M3',1000)">Add to Cart</button>
+              </div>
+
+          </section>
+      </section>
+
+      <section id="iphone" class="macbook-section">
+          <h1>Apple Watches Collection</h1>
+      </section>
+
+      <section class="products">
+          <div class="product">
+              <img src="images/apple-watch-ultra.jpg" alt="Apple Watch Ultra">
+              <p><a href="apple watch U.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>Apple Watch Ultra</h2>
+              <h3>Price: 450$</h3>
+              <button onclick="addToCart('Apple Watch Ultra',450)">Add to Cart</button>
+          </div>
+
+          <div class="product">
+              <img src="images/apple-watch-s9.jpg" alt="Apple Watch Series 9">
+              <p><a href="apple watch s9.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>Apple Watch Series 9</h2>
+              <h3>Price: 500$</h3>
+              <button onclick="addToCart('Apple Watch Series 9'500)">Add to Cart</button>
+          </div>
+
+          <div class="product">
+              <img src="images/apple-watch-ultra2.jpg" alt="Apple Watch Ultra 2">
+              <p><a href="apple watch u2.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>Apple Watch Ultra 2</h2>
+              <h3>Price: 550$</h3>
+              <button onclick="addToCart('Apple Watch Ultra 2',550)">Add to Cart</button>
+          </div>
+
+          <div class="product">
+              <img src="images/apple-watch-s10.jpg" alt="Apple Watch Series 10">
+              <p><a href="apple watch s10.htm" style="color:black">
+                  press here to show details</a></p>
+              <h2>Apple Watch Series 10</h2>
+              <h3>Price: 600$</h3>
+              <button onclick="addToCart('Apple Watch Series 10',600)">Add to Cart</button>
+          </div>
+
+      </section>
+
+  </main>
+
+    <div class="contact-section">
+        <div class="contact-info">
+            <h2>Contact</h2>
+            <div class="address">
+                <p><i class="fas fa-map-marker-alt"></i> 36 King Faisal St, Kafr Nassar, Faisal, Giza Governorate</p>
+                <p><i class="fas fa-map-marker-alt"></i> 273 King Faisal St. next to Kashri Tahrir, Matba3a, Faisal</p>
+            </div>
+            <div class="phone">
+                <p><i class="fas fa-phone"></i>01015954147</p>
+                <pr></pr><pr></pr>
+                <p><i class="fas fa-phone"></i>01014341525</p>
+            </div>
+
+        </div>
+
+        <div class="categories">
+            <h2>Categories</h2>
+            <ul class="categories-list">
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">AirPods</a></li>
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">Apple Watch</a></li>
+            </ul>
+        </div>
+
+        <div class="policies">
+            <h2>Help & Policies</h2>
+            <ul class="policies-list">
+                <li><a href="#">Help & Guide</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund and Returns Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 © Mobile Store. All Rights Reserved</p>
+        <p>All Apple Products in one place, with Best prices in Egypt</p>
+        <p class="developer">  Developed By : <pre>Mostafa    Nabil    Sherif   Yousif    Hager    Menna</pre>
+    </footer>
+    <style>
+
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .contact-info, .categories, .policies {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        h2 {
+            color: #000;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .address, .phone {
+            margin-bottom: 20px;
+        }
+        .address p, .phone p {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .address i, .phone i {
+            color: #0071e3;
+        }
+        .categories-list, .policies-list {
+            list-style: none;
+        }
+        .categories-list li, .policies-list li {
+            margin-bottom: 10px;
+        }
+        .categories-list li a, .policies-list li a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .categories-list li a:hover, .policies-list li a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            background: #333333;
+            border-radius: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+        }
+        footer p {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+
+    </style>
+  <script src="script.js"></script>
+    <script src="auth.js"></script>
+  <button onclick="toggleCart()" class="toggle-cart-btn">Show Cart</button>
+</body>
+</html>
